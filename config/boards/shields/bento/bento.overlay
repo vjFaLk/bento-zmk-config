@@ -1,0 +1,26 @@
+/*
+ * Copyright (c) 2021 Dan Thomas
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+/ {
+    chosen {
+        zmk,kscan = &kscan0;
+    };
+
+    kscan0: kscan_0 {
+        compatible = "zmk,kscan-gpio-direct";
+        label = "KSCAN";
+
+        input-gpios
+            = <&pro_micro_d 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&pro_micro_d 4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&pro_micro_f 4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+
+            , <&pro_micro_d 7 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&pro_micro_b 1 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&pro_micro_b 3 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            ;
+    };
+};

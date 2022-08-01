@@ -1,0 +1,9 @@
+# Copyright (c) 2021 Dan Thomas
+# SPDX-License-Identifier: MIT
+
+if SHIELD_BENTO
+
+config ZMK_KEYBOARD_NAME
+    default "Bento"
+
+endif
