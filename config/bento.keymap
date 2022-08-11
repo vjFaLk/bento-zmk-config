@@ -21,22 +21,22 @@
     compatible = "zmk,combos";
     combo_btclr {
         timeout-ms = <TIMEOUT>;
-        key-positions = <1 2>;
+        key-positions = <0 1>;
         bindings = <&bt BT_CLR>;
     };
     combo_reset {
         timeout-ms = <TIMEOUT>;
-        key-positions = <1 3>;
+        key-positions = <0 2>;
         bindings = <&reset>;
     };
     combo_bootloader {
         timeout-ms = <TIMEOUT>;
-        key-positions = <1 4>;
+        key-positions = <0 4>;
         bindings = <&bootloader>;
     };
     combo_bt_nxt {
         timeout-ms = <TIMEOUT>;
-        key-positions = <1 5>;
+        key-positions = <0 5>;
         bindings = <&bt BT_NXT>;
     };
 };
@@ -52,10 +52,18 @@
 
         default {
            bindings = <
-                &kp F13 &kp F14 &kp F15
+                &mo 1 &kp F14 &kp F15
                 &kp F17 &kp F18 &kp F19
             >;
         sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
+        };
+
+        lower {
+           bindings = <
+                &kp F20 &kp F21 &kp F22
+                &kp F10 &kp F11 &kp F13
+            >;
+        sensor-bindings = <&inc_dec_kp &kp F23 &kp F24>;
         };
 	};
 };
