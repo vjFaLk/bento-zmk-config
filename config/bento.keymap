@@ -22,12 +22,17 @@
     combo_btclr {
         timeout-ms = <TIMEOUT>;
         key-positions = <0 1>;
-        bindings = <&bt BT_CLR>;
+        bindings = <&bt BT_SEL 0>;
     };
     combo_reset {
         timeout-ms = <TIMEOUT>;
         key-positions = <0 2>;
         bindings = <&reset>;
+    };
+    combo_reset {
+        timeout-ms = <TIMEOUT>;
+        key-positions = <0 3>;
+        bindings = <&bt BT_CLR>;
     };
     combo_bootloader {
         timeout-ms = <TIMEOUT>;
