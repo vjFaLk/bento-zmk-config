@@ -19,7 +19,7 @@
 
     combos {
     compatible = "zmk,combos";
-    combo_btclr {
+    combo_sel_0 {
         timeout-ms = <TIMEOUT>;
         key-positions = <0 1>;
         bindings = <&bt BT_SEL 0>;
@@ -29,7 +29,7 @@
         key-positions = <0 2>;
         bindings = <&reset>;
     };
-    combo_reset {
+    combo_clear {
         timeout-ms = <TIMEOUT>;
         key-positions = <0 3>;
         bindings = <&bt BT_CLR>;
